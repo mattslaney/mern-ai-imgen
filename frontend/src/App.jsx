@@ -1,8 +1,10 @@
-import React from 'react'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 import { logo } from './assets';
 import { Home, CreatePost } from './pages';
+
+console.log(import.meta.env);
 
 const App = () => {
   return (
@@ -12,7 +14,12 @@ const App = () => {
           <img src={logo} alt="logo" className="w-28 object-contain" />
         </Link>
 
-        <Link to="/create-post" className="dont-inter font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md">Create</Link>
+        <Link
+          to="/create-post"
+          className="dont-inter font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md"
+        >
+          Create
+        </Link>
       </header>
 
       <main className="sm:p-8 px-4 py-8 w-ful bg-[#f9fafe] min-h-[calc(100vh-73px)]">
@@ -22,7 +29,7 @@ const App = () => {
         </Routes>
       </main>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;
